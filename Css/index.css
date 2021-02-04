@@ -279,7 +279,7 @@ header a {
 
 #service1 {
     display: grid;
-    grid-template: 50% 50%/ 1fr;
+    grid-template: 45% 55%/ 1fr;
     justify-content: center;
     position: relative;
 }
@@ -306,11 +306,11 @@ header a {
     position: absolute;
     background-color: #CD7F32;
     color: #fff;
-    top: 44%;
+    top: 40%;
     left: 40%;
     right: 40%;
-    bottom: 44%;
-    height: 12%;
+    bottom: 49%;
+    height: 11%;
     font-size: 20px;
     font-weight: 600;
     display: flex;
