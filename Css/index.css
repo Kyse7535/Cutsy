@@ -270,11 +270,12 @@ header a {
 
 #services_list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: minmax(400px, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    grid-auto-rows: minmax(450px, 1fr);
     row-gap: 20px;
     column-gap: 20px;
     padding: 0 2%;
+    justify-content: center;
 }
 
 #service1 {
@@ -336,7 +337,8 @@ header a {
 
 #galerie_content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+    justify-content: center;
     row-gap: 20px;
     column-gap: 20px;
 }
@@ -550,7 +552,10 @@ footer {
     /*------ galerie ----------*/
     /*-------- contact -------*/
     #contact_content {
-        margin-top: 5%;
+        margin-top: 2%;
+    }
+    #contact h2 {
+        padding-top: 1%;
     }
     #contact p {
         color: #CD7F32;
