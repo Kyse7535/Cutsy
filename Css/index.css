@@ -276,6 +276,7 @@ header a {
     column-gap: 20px;
     padding: 0 2%;
     justify-content: center;
+    margin: 0 auto;
 }
 
 #service1 {
@@ -472,6 +473,9 @@ footer {
         text-align: center;
         padding-bottom: 4%;
     }
+    #service_list {
+        width: 70%;
+    }
     /*------- services --------*/
     /*------ galerie ----------*/
     #galerie h2 {
@@ -548,6 +552,13 @@ footer {
     /*------ galerie ----------*/
     #galerie h2 {
         padding-bottom: 3%;
+    }
+    #galerie_content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 20px;
     }
     /*------ galerie ----------*/
     /*-------- contact -------*/
