@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+#planning {
+    background-color: black;
+    color: #fff;
+    padding: 3%;
+}
+
+input {
+    color: #fff;
+    font-size: 20px;
+}
+
+form {
+    display: block;
+    padding: 5%;
+}
+
+table {
+    padding: 4% 0;
+}
+
+td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    height: 20px;
+    width: 14.2%;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+th {
+    background-color: #1d1d1d;
+    color: #CD7F32;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+#heureCreneau {
+    display: inline;
+    width: auto;
+}
+
+.selected {
+    background-color: #CD7F32;
+}

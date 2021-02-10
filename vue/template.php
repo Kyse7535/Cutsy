@@ -3,13 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./Css/index.css">
-    <link rel="stylesheet" href="./Css/rdv.css">
-    <title>RDV-Cutsy Barbershop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./public/Css/index.css">
+    <link rel="stylesheet" href="./public/Css/rdv.css">
+    <link rel="stylesheet" href="./public/Css/planning.css">
+    <title><?= $title ?></title>
 </head>
 
 <body>
@@ -17,12 +21,12 @@
         <div id="menu_mobile">
             <i class="fas fa-times fa-4x" id="close_menu"></i>
             <ul>
-                <li><a class="link_menu" href="#accueil">Accueil</a></li>
+                <li><a class="link_menu" href="index.html">Accueil</a></li>
                 <li><a class="link_menu" href="#a_propos">A propos</a></li>
                 <li><a class="link_menu" href="#services">Services</a></li>
                 <li><a class="link_menu" href="#galerie">Galeries</a></li>
                 <li><a class="link_menu" href="#contact">Contact</a></li>
-                <li><a class="link_menu" href="#">RDV</a></li>
+                <li><a class="link_menu" href="index.php?motif=planning">RDV</a></li>
             </ul>
         </div>
     </div>
@@ -39,30 +43,11 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#galerie">Galeries</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#">RDV</a></li>
+                <li><a href="index.php?motif=planning">RDV</a></li>
             </ul>
         </div>
     </header>
-    <main>
-        <div id="head">
-            <div id="head_overlay">
-                <h2><span>Cutsy</span> Barbershop</h2>
-            </div>
-        </div>
-        <div id="formulaire">
-            <p>Merci de prendre votre rdv et nous préciser ce que vous voulez</p>
-            <form action="" method="post" enctype="multipart/form-data">
-                <div id="form_content">
-                    <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo (*)" required>
-                    <input type="email" name="email" id="email" placeholder="Votre email (*)" required>
-                    <label for="photo">Donnez un modele</label>
-                    <input type="file" name="photo" id="photo" title="Choisir modele">
-                    <textarea name="commentaire" id="commentaire" cols="30" rows="8" placeholder="saisissez votre commentaire"></textarea>
-                    <input type="submit" value="Envoyer">
-                </div>
-            </form>
-        </div>
-    </main>
+    <?= $content ?>
     <footer>
         <div id="contact">
             <div id="contact_overlay">
@@ -86,7 +71,7 @@
         </div>
         <p id="auteur">By Kisseime TEVOT</p id="auteur">
     </footer>
-    <script src="./Js/index.js"></script>
+    <script src="./public/Js/index.js"></script>
 </body>
 
 </html>

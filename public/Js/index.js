@@ -26,4 +26,31 @@ window.addEventListener('load', () => {
             overlay_div.style.cssText = "display: none; opacity: 0;"
         })
     });
+
+    function getCreneau() {
+        let td = document.getElementsByTagName('td');
+        td = Array.from(td);
+        let creneau = document.getElementById('creneau');
+
+        td.forEach(td_element => {
+            td_element.addEventListener('click', () => {
+                initialize_td();
+                let id = td_element.getAttribute('id');
+                td_element.classList.add("selected");
+                creneau.setAttribute('value', id);
+            })
+        })
+    }
+
+    function initialize_td() {
+        let td = document.getElementsByTagName('td');
+        td = Array.from(td);
+        td.forEach(td_element => {
+            if (td_element.classList.contains("selected")) {
+                td_element.classList.remove('selected');
+            }
+        })
+    }
+
+    getCreneau();
 })
