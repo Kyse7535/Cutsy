@@ -7,7 +7,6 @@
         </div>
     </div>
     <div id="planning">
-
         <form action="index.php" method="post">
 
             <label for="date">Choisir une semaine :</label>
@@ -19,11 +18,8 @@
             
             if (isset($numWeek)) {
                 $aujourdhui=strtotime("$numWeek");
-            }else {
-                $aujourdhui=strtotime("tomorrow");
-            }
                 ?>
-        <form action="" method="post" id="planning_content">
+        <form action="" method="post" id="planning_content" novalidate>
             <p>Choisir un jour !</p>
             <table>
                 <th>Heures</th>
@@ -84,12 +80,18 @@
 
                                 ?>
             </table>
+            <span id="error_msg">Ce creneau n'est pas disponible. Veuillez en choisir un autre</span>
             <input type="hidden" name="creneau" id="creneau" value="x">
             <input type="hidden" name="motif" value="setcreneau">
-            <h3>Vous avez le creneau suivant.</h3>
+            <h3 id="ok_msg">Vous avez un rdv à <span style="color: #CD7F32;" id="creneau_valeur"></span>.</h3>
             <input type="submit" value="Valider">
         </form>
-
+        <?php
+        
+        }else {
+        //$aujourdhui=strtotime("tomorrow");
+        }
+        ?>
     </div>
 </main>
 

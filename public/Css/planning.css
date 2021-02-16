@@ -29,6 +29,8 @@ td {
     width: 14.2%;
     background-color: #0a0a0a;
     color: #fff;
+    font-size: 10px;
+    cursor: pointer;
 }
 
 th {
@@ -45,4 +47,13 @@ th {
 
 .selected {
     background-color: #CD7F32;
+}
+
+#error_msg {
+    color: #f00;
+    display: none;
+}
+
+#ok_msg {
+    display: none;
 }

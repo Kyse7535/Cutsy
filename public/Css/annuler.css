@@ -1,0 +1,29 @@
+#annuler_content {
+    background-color: #000;
+    color: #fff;
+    padding: 5%;
+}
+
+form {
+    padding: 0;
+    padding-bottom: 3%;
+}
+
+.rdv_item {
+    background-color: #242424;
+}
+
+.rdv_item h4 {
+    color: #CD7F32;
+}
+
+input .btn_delete {
+    border: none;
+    color: red;
+}
+
+#annuler_content h2 {
+    padding-bottom: 2%;
+    color: #CD7F32;
+    text-align: center;
+}

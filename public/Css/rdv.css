@@ -74,6 +74,7 @@ textarea {
     width: 100%;
     margin: 1% 0;
     border: none;
+    color: #fff;
 }
 
 input[type=submit] {

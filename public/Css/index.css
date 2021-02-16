@@ -106,7 +106,7 @@ header a {
 
 #for_desktop .logo {
     display: inline-block;
-    width: 30%;
+    width: 25%;
     margin: 0;
 }
 
@@ -116,6 +116,37 @@ header a {
 
 #for_desktop a:hover {
     text-decoration: overline;
+}
+
+.li_rdv {
+    position: relative;
+    display: inline-block;
+}
+
+.menu_rdv li {
+    width: 100%;
+    margin: 0%;
+}
+
+.menu_rdv li a {
+    color: #fff;
+}
+
+.menu_rdv a:hover {
+    text-decoration: underline;
+}
+
+.menu_rdv {
+    position: absolute;
+    width: 120px;
+    display: none;
+    background-color: #242424;
+    color: #fff;
+}
+
+.menu_rdv ul {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -450,6 +481,13 @@ footer {
 }
 
 @media (min-width: 768px) {
+    .menu_rdv li {
+        width: 100%;
+        margin: 0%;
+    }
+    .menu_rdv a {
+        color: #fff;
+    }
     /*-------accueil --------*/
     #accueil {
         height: 600px;
@@ -569,6 +607,10 @@ footer {
     }
     #for_desktop {
         padding: 0 12%;
+    }
+    .menu_rdv li {
+        width: 100%;
+        margin: 0%;
     }
     /*---------menu ----------*/
     /*------- services --------*/

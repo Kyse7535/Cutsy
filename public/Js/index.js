@@ -14,7 +14,6 @@ window.addEventListener('load', () => {
         }
 
     })
-
     close_menu.addEventListener('click', () => {
         header.style.position = "fixed";
         overlay_div.style.cssText = "display: none; opacity: 0;"
@@ -27,17 +26,50 @@ window.addEventListener('load', () => {
         })
     });
 
+    function display_menu_rdv() {
+        let rdv = document.getElementsByClassName('li_rdv');
+        rdv = Array.from(rdv)
+        let menu_rdv = document.getElementsByClassName('menu_rdv');
+        menu_rdv = Array.from(menu_rdv)
+        rdv.forEach(element => {
+            element.addEventListener('mouseover', () => {
+                menu_rdv[1].style.display = "block";
+            });
+            element.addEventListener('mouseout', () => {
+                menu_rdv[1].style.display = "none";
+            });
+        })
+
+
+    }
+
+
     function getCreneau() {
         let td = document.getElementsByTagName('td');
         td = Array.from(td);
         let creneau = document.getElementById('creneau');
+        let creneau_valeur = document.getElementById('creneau_valeur');
+        let error_msg = document.getElementById('error_msg');
+        error_msg.style.display = "none";
+        let ok_msg = document.getElementById('ok_msg');
+        ok_msg.style.display = "none";
 
         td.forEach(td_element => {
             td_element.addEventListener('click', () => {
                 initialize_td();
-                let id = td_element.getAttribute('id');
-                td_element.classList.add("selected");
-                creneau.setAttribute('value', id);
+                if (td_element.innerText != "Non disponible") {
+                    error_msg.style.display = "none";
+                    ok_msg.style.display = "block";
+                    let id = td_element.getAttribute('id');
+                    td_element.classList.add("selected");
+                    creneau.setAttribute('value', id);
+                    console.log(creneau.value);
+                    creneau_valeur.innerText = id;
+
+                } else {
+                    error_msg.style.display = "block";
+                    ok_msg.style.display = "none";
+                }
             })
         })
     }
@@ -52,5 +84,17 @@ window.addEventListener('load', () => {
         })
     }
 
+    display_menu_rdv();
     getCreneau();
+    validate_form();
+
+    function validate_form() {
+        let form = document.getElementById('planning_content');
+        let error_msg = document.getElementById('error_msg');
+        form.addEventListener('submit', (event) => {
+            if (error_msg.style.display == "block") {
+                event.preventDefault();
+            }
+        })
+    }
 })

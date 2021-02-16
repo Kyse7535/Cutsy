@@ -17,6 +17,7 @@
                 <textarea name="commentaire" id="commentaire" cols="30" rows="8"
                     placeholder="saisissez votre commentaire"></textarea>
                 <input type="hidden" name="motif" value="setRdv">
+                <input type="hidden" name="creneau" value="<?= $creneau ?>">
                 <input type="submit" value="Envoyer">
             </div>
         </form>

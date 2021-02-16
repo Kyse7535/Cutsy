@@ -57,9 +57,41 @@ $base = connexion();
         $mytab['pseudo'] = htmlspecialchars($tab['pseudo']) ;
         $mytab['email'] = htmlspecialchars($tab['email']);
         $mytab['commentaire'] = htmlspecialchars($tab['commentaire']);
-        $mytab['laDate'] = htmlspecialchars($tab['date']);
-        $mytab['$img'] = $img;
-        setCreneau($mytab, $GLOBALS['base']);
+        $mytab['creneau'] = htmlspecialchars($tab['creneau']);
+        $mytab['img'] = $img;
+        $resultat = getOneCreneau($mytab['creneau'], $GLOBALS['base']);
+        if ($resultat == false) {
+            throw new Exception("errueur verification planning");
+        }
+        else {
+            $rdv_Annuler = false;
+            if ($resultat->rowCount() == 0) {
+                setCreneau($mytab, $GLOBALS['base']);
+                
+
+                require_once('./vue/rdv.post.php');
+            }
+            else {
+                require_once('./vue/rdv.post.php');
+            }
+        } 
+    }
+
+    function CtlsendMail($creneau) {
+        $resultat = getOneCreneau($creneau, $GLOBALS['base']);
+        if ($resultat == false) {
+            throw new Exception("impossible d'envoyer mail");
+        }
+        else {
+            ini_set( 'display_errors', 1 );
+            error_reporting( E_ALL );
+            $donnee = $resultat->fetch();
+            $to = 'ibtisseime@gmail.com';
+            $subject = 'Confirmation Rdv';
+            $message = "Bonjour" . $donnee['pseudo']. " ! <br> Votre rdv ea ete enregistre. Voici le numero <br> ". $donnee['IdCreneau'] ;
+            $headers = 'From: Kisseime <ktevot@gmail.com>';
+            mail($to, $subject, $message, $headers); 
+        }
     }
 
     function CtlgetRdv($numWeek) {
@@ -72,6 +104,34 @@ $base = connexion();
             $base = $GLOBALS['base'];
             require_once('./vue/planning.php');
         }
+    }
+
+    function CtlsetCreneau($creneau) {
+        $creneau = $creneau;
+        require_once('./vue/rdv.php');
+    }
+
+    function CtlgetAnnuler() {
+        require_once('./vue/annuler.php');
+    }
+
+    function CtlgetTheDate($tab) {
+        $pseudo = htmlspecialchars($_POST['pseudo']);
+        $laDate = htmlspecialchars($_POST['laDate']);
+        $resultat = getTheDateToCancel($laDate, $pseudo, $GLOBALS['base']);
+        if ($resultat == false ) {
+            throw new Exception('Aucun creneau a annuler');
+        }
+        else {
+            require_once('./vue/annuler.php');
+        }
+    }
+
+    function CtlSetAnnuler($tab) {
+        $laDate = htmlspecialchars($_POST['laDate']);
+        DeleteCreneau($laDate, $GLOBALS['base']);
+        $rdv_Annuler = true;
+        require_once('./vue/rdv.post.php');
     }
 
 ?>

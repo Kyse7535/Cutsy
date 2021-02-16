@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./public/Css/index.css">
     <link rel="stylesheet" href="./public/Css/rdv.css">
     <link rel="stylesheet" href="./public/Css/planning.css">
+    <link rel="stylesheet" href="./public/Css/rdv.post.css">
+    <link rel="stylesheet" href="./public/Css/annuler.css">
     <title><?= $title ?></title>
 </head>
 
@@ -21,12 +23,22 @@
         <div id="menu_mobile">
             <i class="fas fa-times fa-4x" id="close_menu"></i>
             <ul>
-                <li><a class="link_menu" href="index.html">Accueil</a></li>
+                <li><a class="link_menu" href="index.php">Accueil</a></li>
                 <li><a class="link_menu" href="#a_propos">A propos</a></li>
                 <li><a class="link_menu" href="#services">Services</a></li>
                 <li><a class="link_menu" href="#galerie">Galeries</a></li>
                 <li><a class="link_menu" href="#contact">Contact</a></li>
-                <li><a class="link_menu" href="index.php?motif=planning">RDV</a></li>
+                <div class="li_rdv">
+                    <li>
+                        <a href="#">RDV</a>
+                        <div class="menu_rdv" style="display: none;">
+                            <ul>
+                                <li><a href="index.php?motif=planning">Prendre RDV</a></li>
+                                <li><a href="index.php?motif=getAnnuler">Annuler Rdv</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </div>
             </ul>
         </div>
     </div>
@@ -38,13 +50,25 @@
         <div id="for_desktop">
             <div class="logo">Cutsy Barbershop</div>
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="index.php">Accueil</a></li>
                 <li><a href="#a_propos">A propos</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#galerie">Galeries</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="index.php?motif=planning">RDV</a></li>
+                <div class="li_rdv">
+                    <li>
+                        <a href="">RDV</a>
+                        <div class="menu_rdv" style="display: none;">
+                            <ul>
+                                <li><a href="index.php?motif=planning">Prendre RDV</a></li>
+                                <li><a href="index.php?motif=getAnnuler">Annuler Rdv</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </div>
+
             </ul>
+
         </div>
     </header>
     <?= $content ?>

@@ -14,9 +14,29 @@ function getCreaneau($base) {
 }
 
 function setCreneau($tab, $base) {
-    $sql = "insert into Creaneau(pseudo,laDate, email, image, commentaire) values(?, ?, ?, ?, ?);";
+    $sql = "insert into Creneau(pseudo,laDate, email, image, commentaire) values(?, ?, ?, ?, ?);";
     $resultat = $base->prepare($sql);
-    $resultat = $resultat->execute(array($tab['pseudo'], $tab['date'], $tab['email'], $tab['image'], $tab['commentaire']));
+    $resultat = $resultat->execute(array($tab['pseudo'], $tab['creneau'], $tab['email'], $tab['img'], $tab['commentaire']));
+}
+
+function getOneCreneau($creneau, $base) {
+    $sql = "select * from Creneau where laDate = ?";
+    $resultat = $base->prepare($sql);
+    $resultat->execute(array($creneau));
+    return $resultat;
+}
+
+function getTheDateToCancel($laDate, $pseudo, $base) {
+    $sql = "select * from Creneau where laDate = ? and pseudo = ?";
+    $resultat = $base->prepare($sql);
+    $resultat->execute(array($laDate, $pseudo));
+    return $resultat;
+}
+
+function DeleteCreneau($laDate, $base) {
+    $sql = "delete from Creneau where laDate = ?";
+    $resultat = $base->prepare($sql);
+    $resultat->execute(array($laDate));
 }
 
 ?>
