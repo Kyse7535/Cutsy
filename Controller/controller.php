@@ -134,4 +134,8 @@ $base = connexion();
         require_once('./vue/rdv.post.php');
     }
 
+    function CtlAdmin() {
+        require_once('./vue/admin.php');
+    }
+
 ?>

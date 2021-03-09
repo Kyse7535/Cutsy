@@ -6,7 +6,7 @@
 
 form {
     padding: 0;
-    padding-bottom: 3%;
+    padding-bottom: 7%;
 }
 
 .rdv_item {
@@ -26,4 +26,32 @@ input .btn_delete {
     padding-bottom: 2%;
     color: #CD7F32;
     text-align: center;
+}
+
+@media (min-width: 500px) and (max-width: 999px) {
+    #annuler_item1,
+    #list_rdv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    #annuler_item1 form,
+    #list_rdv_item {
+        width: 50%;
+    }
+}
+
+@media(min-width: 1000px) {
+    #annuler_item1,
+    #list_rdv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    #annuler_item1 form,
+    #list_rdv_item {
+        width: 35%;
+    }
 }

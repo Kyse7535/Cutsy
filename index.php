@@ -14,7 +14,7 @@ try {
     }
     elseif (isset($_GET['admin'])) {
        //CtlgetRdv();
-        CtlPlanning();
+        CtlAdmin();
     }
     elseif (isset($_POST['motif'])) {
         $motif = htmlspecialchars($_POST['motif']);
