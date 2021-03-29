@@ -80,12 +80,18 @@
     <div id="galerie">
         <h2>Galerie</h2>
         <div id="galerie_content">
-            <img src="./public/Css/barbershop-c.jpg" alt="">
-            <img src="./public/Css/barbershop-c.jpg" alt="">
-            <img src="./public/Css/barbershop-c.jpg" alt="">
-            <img src="./public/Css/barbershop-c.jpg" alt="">
-            <img src="./public/Css/barbershop-c.jpg" alt="">
-            <img src="./public/Css/barbershop-c.jpg" alt="">
+            <img src="./public/image/image1r.jpg" alt="">
+            <img src="./public/image/img2r.jpg" alt="">
+            <img src="./public/image/img3r.jpg" alt="">
+            <img src="./public/image/img4r.jpg" alt="">
+            <img src="./public/image/img5r.jpg" alt="">
+            <img src="./public/image/img6r.jpg" alt="">
+            <img src="./public/image/img7r.jpg" alt="">
+            <img src="./public/image/img8r.jpg" alt="">
+            <img src="./public/image/img9r.jpg" alt="">
+            <img src="./public/image/img10r.jpg" alt="">
+            <img src="./public/image/img11r.jpg" alt="">
+            <img src="./public/image/img12r.jpg" alt="">
         </div>
         <a class="btn_rdv" href="index.php?motif=planning"><i class="far fa-calendar-check"></i> Prendre RDV</a>
     </div>

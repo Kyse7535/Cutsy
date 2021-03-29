@@ -7,8 +7,7 @@
         </div>
     </div>
     <div id="planning">
-        <form action="index.php" method="post">
-
+        <form action="index.php" method="post" id="form1">
             <label for="date">Choisir une semaine :</label>
             <input type="week" name="date" id="date">
             <input type="hidden" name="motif" value="setweek">
@@ -19,8 +18,8 @@
             if (isset($numWeek)) {
                 $aujourdhui=strtotime("$numWeek");
                 ?>
-        <form action="" method="post" id="planning_content" novalidate>
-            <p>Choisir un jour !</p>
+        <form action="index.php" method="post" id="planning_content" novalidate>
+            <h2>Choisir un jour !</h2>
             <table>
                 <th>Heures</th>
                 <?php
@@ -41,7 +40,7 @@
                             }
                     ?>
                 <?php
-                        echo date('d m Y ', $datedebut) . "<br>";
+                       
                         $heure_debut = strtotime('+ 10 hours', $datedebut);
                         $heure_fin = strtotime('+ 10 hours', $heure_debut);
                                         while ($heure_debut < $heure_fin) {  
@@ -94,6 +93,6 @@
         ?>
     </div>
 </main>
-
+<script src="./public/Js/planning.js"></script>
 <?php $content = ob_get_clean(); ?>
 <?php require_once('./vue/template.php'); ?>

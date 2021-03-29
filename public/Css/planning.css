@@ -1,11 +1,19 @@
-* {
-    box-sizing: border-box;
-}
-
 #planning {
     background-color: black;
     color: #fff;
     padding: 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#planning h2 {
+    text-align: center;
+}
+
+#planning_content {
+    overflow-x: auto;
 }
 
 input {
@@ -13,20 +21,15 @@ input {
     font-size: 20px;
 }
 
-form {
-    display: block;
-    padding: 7% 5%;
-}
-
 table {
     padding: 4% 0;
+    width: 100%;
 }
 
 td {
     border: 1px solid #ccc;
     border-collapse: collapse;
     height: 20px;
-    width: 14.2%;
     background-color: #0a0a0a;
     color: #fff;
     font-size: 10px;

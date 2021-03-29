@@ -8,7 +8,7 @@
 body,
 html {
     height: 100%;
-    min-width: 300px;
+    min-width: 350px;
 }
 
 
@@ -38,14 +38,11 @@ header a {
 
 #menu_mobile {
     width: 100%;
-}
-
-#menu_mobile ul {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    right: 35%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 #menu_mobile li {
@@ -72,6 +69,10 @@ header a {
     top: 20px;
     right: 20px;
     color: #898786;
+}
+
+.menu_rdv_mobile {
+    display: none;
 }
 
 
@@ -128,10 +129,6 @@ header a {
     margin: 0%;
 }
 
-.menu_rdv li a {
-    color: #fff;
-}
-
 .menu_rdv a:hover {
     text-decoration: underline;
 }
@@ -142,11 +139,6 @@ header a {
     display: none;
     background-color: #242424;
     color: #fff;
-}
-
-.menu_rdv ul {
-    display: flex;
-    flex-direction: column;
 }
 
 
@@ -162,7 +154,6 @@ header a {
     top: 0;
     left: 0;
     display: none;
-    opacity: 0;
     transition: all 2s ease-in;
 }
 
@@ -222,7 +213,7 @@ header a {
 .btn_rdv {
     color: #CD7F32;
     background-color: #000;
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
     border: 1px solid #CD7F32;
     text-decoration: none;
@@ -237,7 +228,6 @@ header a {
 }
 
 .btn_rdv:hover {
-    padding: 20px 25px;
     background-color: #CD7F32;
     color: #000;
 }
@@ -394,9 +384,9 @@ header a {
 #galerie_content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+    grid-auto-rows: min-content;
     justify-content: center;
-    row-gap: 20px;
-    column-gap: 20px;
+    grid-gap: 20px;
 }
 
 #galerie_content img {
@@ -571,6 +561,7 @@ footer {
 @media (min-width: 1201px) {
     .btn_rdv {
         font-size: 25px;
+        margin: 2% 0;
     }
     /*------ accueil -----*/
     #accueil {

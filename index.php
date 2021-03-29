@@ -4,7 +4,6 @@ try {
     if (isset($_GET['motif'])) {
         $motif = htmlspecialchars($_GET['motif']);
         if ($motif == "planning") {
-            
             CtlPlanning();
         }
         elseif ($motif == "getAnnuler") {
@@ -13,14 +12,14 @@ try {
         
     }
     elseif (isset($_GET['admin'])) {
-       //CtlgetRdv();
+       
         CtlAdmin();
     }
     elseif (isset($_POST['motif'])) {
         $motif = htmlspecialchars($_POST['motif']);
         if ($motif == "setcreneau") {
             CtlsetCreneau($_POST['creneau']);
-            CtlsendMail($_POST['creneau']);
+            //CtlsendMail($_POST['creneau']);
         }
         elseif ($motif == "setRdv") {
             $img = Ctlimage();

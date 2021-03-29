@@ -1,4 +1,5 @@
 <?php $title = "Annuler-Cutsy Barbershop"; ?>
+
 <?php ob_start(); ?>
 <main>
     <div id="head">

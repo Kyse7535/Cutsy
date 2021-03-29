@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./public/Js/index.js"></script>
+
     <link rel="stylesheet" href="./public/Css/index.css">
     <link rel="stylesheet" href="./public/Css/rdv.css">
     <link rel="stylesheet" href="./public/Css/planning.css">
@@ -28,17 +31,14 @@
                 <li><a class="link_menu" href="#services">Services</a></li>
                 <li><a class="link_menu" href="#galerie">Galeries</a></li>
                 <li><a class="link_menu" href="#contact">Contact</a></li>
-                <div class="li_rdv">
-                    <li>
-                        <a href="#">RDV</a>
-                        <div class="menu_rdv" style="display: none;">
-                            <ul>
-                                <li><a href="index.php?motif=planning">Prendre RDV</a></li>
-                                <li><a href="index.php?motif=getAnnuler">Annuler Rdv</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </div>
+
+                <li class="li_rdv_mobile link_menu">
+                    <a href="#">RDV</a>
+                </li>
+            </ul>
+            <ul class="menu_rdv_mobile">
+                <li><a href="index.php?motif=planning">Prendre RDV</a></li>
+                <li><a href="index.php?motif=getAnnuler">Annuler Rdv</a></li>
             </ul>
         </div>
     </div>
@@ -55,17 +55,14 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#galerie">Galeries</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <div class="li_rdv">
-                    <li>
-                        <a href="">RDV</a>
-                        <div class="menu_rdv" style="display: none;">
-                            <ul>
-                                <li><a href="index.php?motif=planning">Prendre RDV</a></li>
-                                <li><a href="index.php?motif=getAnnuler">Annuler Rdv</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </div>
+                <li class="li_rdv">
+                    <a href="#">RDV</a>
+                    <ul class="menu_rdv" style="display: none;">
+                        <li><a href="index.php?motif=planning">Prendre RDV</a></li>
+                        <li><a href="index.php?motif=getAnnuler">Annuler Rdv</a></li>
+                    </ul>
+
+                </li>
 
             </ul>
 
@@ -95,7 +92,7 @@
         </div>
         <p id="auteur">By Kisseime TEVOT</p id="auteur">
     </footer>
-    <script src="./public/Js/index.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 <?php $title = "Planning-Cutsy Barbershop"; ?>
+
 <?php ob_start(); ?>
 <main>
     <div id="head">
