@@ -1,5 +1,7 @@
 <?php $title = "Admin-Cutsy Barbershop"; ?>
 <?php ob_start() ?>
+
+
 <main>
     <div id="head">
         <div id="head_overlay">
